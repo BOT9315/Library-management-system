@@ -3,8 +3,8 @@ from utils import books, next_id
 def add_books():
     global next_id
 
-    title = input("Enter book title: ")
-    author = input("Enter author name of the book: ")
+    title = input("Enter book title: ").title()
+    author = input("Enter author name of the book: ").title()
 
     books[next_id] = {
         "title": title,
