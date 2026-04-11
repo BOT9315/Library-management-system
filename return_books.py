@@ -9,7 +9,7 @@ def return_books():
     for book_id, book in issued_books.items():
         print(f"{book_id}. {book['title']}")
 
-    choice = input("Enter book number to return to the library: ").title
+    choice = input("Enter book number to return to the library: ").strip()  
 
     if choice.isdigit():
         choice = int(choice)
@@ -19,3 +19,5 @@ def return_books():
             print("Book returned successfully, thank you! Hope you enjoyed reading it.")
         else:
             print("Invalid number or book not issued.")
+    else:
+        print("Invalid input. Please enter a valid book number.")
