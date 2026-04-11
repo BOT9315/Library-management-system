@@ -1,5 +1,6 @@
 def library():
      while True:
+        print("\nWelcome to the Library Management System!")
         print("\n1. Add Book in Library")
         print("\n2. View Books in Library")
         print("\n3. Issue Book from Library")
@@ -23,10 +24,9 @@ def library():
                 return_books()
             elif choice == 5:
                 print("Exiting the library management system.")
-                
                 break
             else:
                 print("Invalid choice. Please try again.")
         else:
-            print("Invalid input. Please enter a number corresponding to the options.  TANK YOU!")
+            print("Invalid input. Please enter a number corresponding to the options. THANK YOU!")
 library()
