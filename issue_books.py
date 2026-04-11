@@ -2,7 +2,7 @@ from utils import books, issued_books
 
 def issue_books():
     if not books:
-        print("No books are available for issue.")
+        print("No books are available for issue,sorry for your inconvenience. Please check back later.")
         return
     else:
         print("\nBooks available for issue are:")
@@ -10,7 +10,7 @@ def issue_books():
     for book_id, book in books.items():
         print(f"{book_id}. {book['title']}")
 
-    choice = input("Enter book number to issue from library: ")
+    choice = input("Enter book number to issue from library: ").title()
 
     if choice.isdigit():
         choice = int(choice)
