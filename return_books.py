@@ -11,12 +11,10 @@ def return_books():
         print(f"{book_id}. {book['title']} (issued to {book['student_name']}, due in {book['days_allotted']} days from {book['issue_date']})")
 
     choice = input("Enter book number to return to the library: ")
-
     if choice.isdigit():
         choice = int(choice)
-
         if choice in issued_books:
-            issue_date = datetime.strptime(issued_books[choice]["issue_date"], "%Y-%m-%d").date()
+            issue_date = datetime.strptime(issued_books[choice]["issue_date"], "%Y-%m-%d").date() #data of submission
             today = datetime.today().date()
             days_used = (today - issue_date).days
             days_allotted = issued_books[choice]["days_allotted"]
