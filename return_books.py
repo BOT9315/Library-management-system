@@ -11,6 +11,7 @@ def return_books():
         print(f"{book_id}. {book['title']} (issued to {book['student_name']}, due in {book['days_allotted']} days from {book['issue_date']})")
 
     choice = input("Enter book number to return to the library: ")
+    
     if choice.isdigit():
         choice = int(choice)
         if choice in issued_books:
