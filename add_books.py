@@ -5,10 +5,7 @@ def add_books():
     title = input("Enter book title: ").title()
     author = input("Enter author name of the book: ").title()
 
-    books[next_id] = {
-        "title": title,
-        "author": author
-    }
+    books[next_id] = {"title": title,"author": author}
 
     print(f"Book '{title}' added successfully in the library!")
 
