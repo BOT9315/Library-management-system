@@ -1,5 +1,4 @@
 from utils import books, next_id
-
 def add_books():
     global next_id
 
